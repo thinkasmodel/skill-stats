@@ -30,6 +30,7 @@ from datetime import datetime
 from pathlib import Path
 import re
 
+__version__ = "0.1.0"
 
 # ─── Constants ───────────────────────────────────────────────────────────────
 
@@ -495,6 +496,9 @@ Examples:
         """,
     )
 
+    parser.add_argument(
+        "-v", "--version", action="version", version=f"%(prog)s {__version__}",
+    )
     parser.add_argument(
         "--path",
         default=DEFAULT_CLAUDE_DIR,
